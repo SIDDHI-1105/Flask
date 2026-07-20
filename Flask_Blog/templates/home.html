@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>HANUMAN</title>
+    {% endif %}
+  </head>
+  <body>
+    <h1>HANUMAN</h1>
+
+    {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+
+    <small> By {{ post.author }} on {{ post.date_posted }} </small>
+
+    <p>{{ post.content }}</p>
+
+    <hr />
+    {% endfor %}
+
+    <p>Welcome to the HANUMAN blog!</p>
+  </body>
+</html>
